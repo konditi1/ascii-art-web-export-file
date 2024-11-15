@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title}}</title>
+    <style>
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    background-color: rgb(49, 49, 126);
+    color: azure;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: 0 auto;
+    padding: 0 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: azure;
+    text-decoration: none;
+}
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Error page styles */
+main.error {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+main.error h1 {
+    color: #e74c3c;
+    font-size: 36px;
+}
+
+main.error h3 {
+    color: #c0392b;
+    font-size: 24px;
+}
+
+main.error p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+main.error p i {
+    color: #555;
+}
+
+main.error a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main.error a:hover {
+    text-decoration: underline;
+}
+
+main.error ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main.error ul li {
+    font-size: 16px;
+    color: #555;
+}
+
+footer {
+    background: rgb(49, 49, 126);
+    color: azure;
+    text-align: center;
+    padding: 0.1rem 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: azure;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+      <nav>
+          <ul>
+              <li><a href="/">Ascii-Web</a></li>
+              <li><a href="/about">About</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <main class="error">
+        <h1>Oops! Something went wrong</h1>
+        <h3>The server returned a {{.Status}}</h3>
+        <p><i>{{.Message}}</i></p>
+        <p>Please try again. If the error persists, contact us.
+            <a href="https://github.com/konditi1/ascii-art-web/issues">Report an issue</a>
+            Please provide the following information:
+            <ul>
+                <li>Status code: {{.Status}}</li>
+                <li>Message: {{.Message}}</li>
+            </ul>
+        </p>
+        <a href="/">Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ascii-Web. All rights reserved.</p>
+    </footer>
+</body>
+</html>

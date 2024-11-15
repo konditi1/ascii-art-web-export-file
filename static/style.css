@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+h1 {
+  margin: auto;
+  padding: 15px;
+  width: 50%;
+}
+
+.input-box {
+  height: 200px;
+  width: 50%;
+  border-color: black;
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(49, 49, 126);
+  color: azure;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin-left: 0 auto;
+  padding: 0 1rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: azure;
+  text-decoration: none;
+}
+
+.form-div {
+  margin: auto;
+  width: 60%;
+  padding: 5px;
+}
+
+pre {
+  margin: auto;
+  border-style: ridge;
+  height: 200px;
+  width: 50%;
+  overflow: auto;
+  padding: 70px;
+  background-color: white;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(93, 93, 163);
+  color: whitesmoke;
+}
+
+.radio {
+  accent-color: black;
+}
+
+.label-text {
+  font-size: 21px;
+}
+
+.result-section pre {
+  padding: 0 5px;
+}
+
+.result-section form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .result-section form {
+    margin: 10px auto;
+  }
+
+footer {
+  background: rgb(49, 49, 126);
+  height: 4%;
+  color: azure;
+  text-align: center;
+  padding: 0.1rem 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+footer a {
+  color: azure;
+}
+
+main.about {
+  align-items: center;
+}
+
+
+
+@media only screen and (max-width : 600px) {
+  textarea {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+  }
+  h1 {
+    margin: auto;
+  }
+
+  .input-box {
+    height: 145px;
+    width: 240px;
+  }
+
+  .form-div {
+    margin: auto;
+    width: 300px;
+    padding: 5px;
+  }
+
+  pre {
+    margin: auto;
+    border-style: ridge;
+    height: 250px;
+    width: 80%;
+    overflow: auto;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  footer {
+    background: rgb(49, 49, 126);
+    color: azure;
+    text-align: center;
+    padding: 0.1rem 1rem;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+  }
+  
+  footer a {
+    color: azure;
+  }
+  
+
+
+}
+
+@media only screen and (min-width : 600px) {
+  textarea {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+  }
+  .input-box {
+    height: 200px;
+    width: 325px;
+  }
+
+  .label-banner {
+    font-size: 20px;
+  }
+
+  pre {
+    margin: auto;
+    border-style: ridge;
+    height: 200px;
+    width: 70%;
+    overflow: auto;
+    padding: 70px;
+    background-color: white;
+    margin-top: auto;
+  }
+
+  .button {
+    width: 80px;
+    height: 35px;
+  }
+}
+
+
+@media only screen and (min-width : 768px) {
+  textarea {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+  }
+
+
+  .input-box {
+    height: 200px;
+    width: 500px;
+  }
+  pre {
+    margin: auto;
+    border-style: ridge;
+    height: 215px;
+    width: 61%;
+    overflow: auto;
+    padding: 70px;
+    background-color: white;
+    margin-top: auto;
+  }
+}
+

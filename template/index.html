@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ascii-Art Generator</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/">Ascii-Web</a></li>
+            <li><a href="about">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="form-div">
+        <form name="Ascii_form" action="/ascii-art" method="POST">
+          <label for="input" class="label-text">
+            <i>Enter your input here</i></label
+          ><br />
+          <textarea
+            name="input"
+            class="input-box"
+            id="input"
+            required
+          ></textarea
+          ><br />
+
+          <br />
+          <label for="banner" class="label-banner">Banner file</label><br />
+          <br />
+          <input
+            type="radio"
+            class="radio"
+            name="banner"
+            id="shadow"
+            value="shadow"
+            required
+          />
+          <label for="shadow" class="label-banner">shadow</label>
+
+          <input
+            type="radio"
+            class="radio"
+            name="banner"
+            id="thinkertoy"
+            value="thinkertoy"
+          />
+          <label for="thinkertoy" class="label-banner">thinkertoy</label>
+
+          <input
+            type="radio"
+            class="radio"
+            name="banner"
+            id="standard"
+            value="standard"
+          />
+          <label for="standard" class="label-banner">standard</label><br />
+          <br />
+          <input
+            type="submit"
+            class="button"
+            value="Generate"
+            name="generate"
+          />
+        </form>
+      </div>
+    </main>
+    <br /><br />
+    {{if .Result}}
+    <div class="result-section">
+      <pre>{{ .Result}}</pre>
+      <form action="/save" method="post">
+        <input type="submit" class="button" value="Download" />
+      </form>
+    </div>
+    {{end}}
+    <footer>
+      <p>&copy; 2024 Ascii-Web. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
